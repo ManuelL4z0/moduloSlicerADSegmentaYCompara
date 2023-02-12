@@ -1,5 +1,5 @@
 # moduloSlicerADSegmentaYCompara
-Módulo en Python para la asistencia a la segmentación y comparación de estructuras del cerebro en 3D Slicer. Desarrollado en el marco del MIBSD de la US.
+Módulo en Python para la asistencia a la segmentación y comparación de estructuras del cerebro en 3D Slicer. Desarrollado en el marco del MIBSD de la US. Funcionando en Slicer 5.0.3 y Python 3.9.10
 
 Puede instalarse como cualquier extensión al incluirla en el directorio que Slicer usa para gestionarlas. Seguidamente será necesario seleccionarla desde Slicer con el 'Extension Wizard' dentro de las 'Developer Tools'.
 
