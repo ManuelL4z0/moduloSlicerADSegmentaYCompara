@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>moduloGeneral</class>
+ <widget class="qMRMLWidget" name="moduloGeneral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>388</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="ctkCollapsibleButton" name="inputsCollapsibleButton">
+     <property name="styleSheet">
+      <string notr="true">ctkCollapsibleButton#inputsCollapsibleButton{
+	background-color:rgb(170,170,170)
+}</string>
+     </property>
+     <property name="text">
+      <string>Inputs</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Input volume:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="qMRMLNodeComboBox" name="inputSelector">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Pick the input to the algorithm.</string>
+        </property>
+        <property name="nodeTypes">
+         <stringlist>
+          <string>vtkMRMLScalarVolumeNode</string>
+         </stringlist>
+        </property>
+        <property name="showChildNodeTypes">
+         <bool>false</bool>
+        </property>
+        <property name="addEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="removeEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="editEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="renameEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Output volume:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="qMRMLNodeComboBox" name="outputSelector">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="nodeTypes">
+         <stringlist>
+          <string>vtkMRMLScalarVolumeNode</string>
+         </stringlist>
+        </property>
+        <property name="showHidden">
+         <bool>false</bool>
+        </property>
+        <property name="showChildNodeTypes">
+         <bool>false</bool>
+        </property>
+        <property name="editEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="renameEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="grow_seeds_CollapsibleButton">
+     <property name="styleSheet">
+      <string notr="true">ctkCollapsibleButton#grow_seeds_CollapsibleButton{
+	background-color:rgb(150,150,250)
+}</string>
+     </property>
+     <property name="text">
+      <string>Seed Grow Segmentation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton_seedGrow_Draw1">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Draw Segment 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="ctkSliderWidget" name="SliderWidget_seedGrow_Draw1">
+        <property name="singleStep">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="pageStep">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="minimum">
+         <double>2.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="value">
+         <double>4.500000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_seedGrow_Draw2">
+        <property name="text">
+         <string>Draw Segment 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="ctkSliderWidget" name="SliderWidget_seedGrow_Draw2">
+        <property name="singleStep">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="pageStep">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="minimum">
+         <double>2.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="value">
+         <double>4.500000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton_seedGrow_Erase1">
+        <property name="text">
+         <string>Erase Segment 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButton_seedGrow_Erase2">
+        <property name="text">
+         <string>Erase Segment 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="pushButton_seedGrow_Apply">
+        <property name="text">
+         <string>Apply Grow Seeds</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="pushButton_seedGrow_Preview">
+        <property name="text">
+         <string>Preview</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CollapsibleButton_2">
+     <property name="styleSheet">
+      <string notr="true">ctkCollapsibleButton#CollapsibleButton_2{
+	background-color:rgb(255, 183, 16)
+}</string>
+     </property>
+     <property name="text">
+      <string>4 steps segmentation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Threshold</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="ctkRangeWidget" name="RangeWidget_Threshold">
+        <property name="decimals">
+         <number>0</number>
+        </property>
+        <property name="minimum">
+         <double>-100.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>5500.000000000000000</double>
+        </property>
+        <property name="maximumValue">
+         <double>1000.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_a4p_Apply">
+        <property name="text">
+         <string>Apply shrink, keep largest island  &amp;&amp; grow</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CollapsibleButton_3">
+     <property name="styleSheet">
+      <string notr="true">ctkCollapsibleButton#CollapsibleButton_3{
+	background-color:rgb(170, 255, 0)
+}</string>
+     </property>
+     <property name="text">
+      <string>Comparison of volumes</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton_computeSegmentStatistics">
+        <property name="text">
+         <string>Compute segment statistics</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ctkCollapsibleButton</class>
+   <extends>QWidget</extends>
+   <header>ctkCollapsibleButton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ctkRangeWidget</class>
+   <extends>QWidget</extends>
+   <header>ctkRangeWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ctkSliderWidget</class>
+   <extends>QWidget</extends>
+   <header>ctkSliderWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>qMRMLNodeComboBox</class>
+   <extends>QWidget</extends>
+   <header>qMRMLNodeComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>qMRMLWidget</class>
+   <extends>QWidget</extends>
+   <header>qMRMLWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>moduloGeneral</sender>
+   <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+   <receiver>inputSelector</receiver>
+   <slot>setMRMLScene(vtkMRMLScene*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>moduloGeneral</sender>
+   <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+   <receiver>outputSelector</receiver>
+   <slot>setMRMLScene(vtkMRMLScene*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
